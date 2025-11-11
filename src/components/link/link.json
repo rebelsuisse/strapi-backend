@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_link_links",
+  "info": {
+    "displayName": "link",
+    "icon": "link"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 64,
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "minLength": 6,
+      "required": true
+    }
+  },
+  "config": {}
+}
