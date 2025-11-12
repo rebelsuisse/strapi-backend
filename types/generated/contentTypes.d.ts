@@ -525,7 +525,7 @@ export interface ApiTheWallOfShameTheWallOfShame
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     consequence: Schema.Attribute.RichText &
@@ -553,14 +553,14 @@ export interface ApiTheWallOfShameTheWallOfShame
     > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     incident_date: Schema.Attribute.Date &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     incident_location: Schema.Attribute.Enumeration<
@@ -581,7 +581,7 @@ export interface ApiTheWallOfShameTheWallOfShame
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     locale: Schema.Attribute.String;
