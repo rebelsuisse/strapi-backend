@@ -35,6 +35,20 @@
       },
       "targetField": "title"
     },
+    "sujet": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::sujet.sujet",
+      "inversedBy": "the_wall_of_shames"
+    },
+    "subject_role": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
     "incident_date": {
       "type": "date",
       "pluginOptions": {
@@ -43,38 +57,6 @@
         }
       },
       "required": true
-    },
-    "image": {
-      "type": "media",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "multiple": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
-    "subject": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "required": true
-    },
-    "consequence": {
-      "type": "text",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
     },
     "category": {
       "type": "enumeration",
@@ -97,61 +79,6 @@
         "xenophobia"
       ]
     },
-    "subject_canton": {
-      "type": "enumeration",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "required": true,
-      "enum": [
-        "CH",
-        "AG",
-        "AI",
-        "AR",
-        "BE",
-        "BL",
-        "BS",
-        "FR",
-        "GE",
-        "GL",
-        "GR",
-        "JU",
-        "LU",
-        "NE",
-        "NW",
-        "OW",
-        "SG",
-        "SH",
-        "SO",
-        "SZ",
-        "TG",
-        "TI",
-        "UR",
-        "VD",
-        "VS",
-        "ZG",
-        "ZH"
-      ]
-    },
-    "subject_role": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "incident_location": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "required": false
-    },
     "description": {
       "type": "richtext",
       "pluginOptions": {
@@ -161,6 +88,51 @@
       },
       "required": true,
       "minLength": 19
+    },
+    "incident_location": {
+      "type": "enumeration",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true,
+      "enum": [
+        "Facebook",
+        "Twitter_X",
+        "Instagram",
+        "Parliament",
+        "Media",
+        "Television",
+        "Newspaper",
+        "Campaign",
+        "Statement",
+        "Public",
+        "Other"
+      ]
+    },
+    "evidence_image": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "consequence": {
+      "type": "richtext",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "sources": {
       "type": "component",

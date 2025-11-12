@@ -430,6 +430,67 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiSujetSujet extends Struct.CollectionTypeSchema {
+  collectionName: 'sujets';
+  info: {
+    displayName: 'Sujet';
+    pluralName: 'sujets';
+    singularName: 'sujet';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    canton: Schema.Attribute.Enumeration<
+      [
+        'CH',
+        'AG',
+        'AI',
+        'AR',
+        'BE',
+        'BL',
+        'BS',
+        'FR',
+        'GE',
+        'GL',
+        'GR',
+        'JU',
+        'LU',
+        'NE',
+        'NW',
+        'OW',
+        'SG',
+        'SH',
+        'SO',
+        'SZ',
+        'TG',
+        'TI',
+        'UR',
+        'VD',
+        'VS',
+        'ZG',
+        'ZH',
+      ]
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::sujet.sujet'> &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    picture: Schema.Attribute.Media<'images'>;
+    publishedAt: Schema.Attribute.DateTime;
+    the_wall_of_shames: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::the-wall-of-shame.the-wall-of-shame'
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiTheWallOfShameTheWallOfShame
   extends Struct.CollectionTypeSchema {
   collectionName: 'the_wall_of_shames';
@@ -467,7 +528,7 @@ export interface ApiTheWallOfShameTheWallOfShame
           localized: true;
         };
       }>;
-    consequence: Schema.Attribute.Text &
+    consequence: Schema.Attribute.RichText &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -486,7 +547,7 @@ export interface ApiTheWallOfShameTheWallOfShame
       Schema.Attribute.SetMinMaxLength<{
         minLength: 19;
       }>;
-    image: Schema.Attribute.Media<
+    evidence_image: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
     > &
@@ -502,7 +563,22 @@ export interface ApiTheWallOfShameTheWallOfShame
           localized: true;
         };
       }>;
-    incident_location: Schema.Attribute.String &
+    incident_location: Schema.Attribute.Enumeration<
+      [
+        'Facebook',
+        'Twitter_X',
+        'Instagram',
+        'Parliament',
+        'Media',
+        'Television',
+        'Newspaper',
+        'Campaign',
+        'Statement',
+        'Public',
+        'Other',
+      ]
+    > &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -526,56 +602,13 @@ export interface ApiTheWallOfShameTheWallOfShame
           localized: true;
         };
       }>;
-    subject: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    subject_canton: Schema.Attribute.Enumeration<
-      [
-        'CH',
-        'AG',
-        'AI',
-        'AR',
-        'BE',
-        'BL',
-        'BS',
-        'FR',
-        'GE',
-        'GL',
-        'GR',
-        'JU',
-        'LU',
-        'NE',
-        'NW',
-        'OW',
-        'SG',
-        'SH',
-        'SO',
-        'SZ',
-        'TG',
-        'TI',
-        'UR',
-        'VD',
-        'VS',
-        'ZG',
-        'ZH',
-      ]
-    > &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     subject_role: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
+    sujet: Schema.Attribute.Relation<'manyToOne', 'api::sujet.sujet'>;
     title: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique &
@@ -1103,6 +1136,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::sujet.sujet': ApiSujetSujet;
       'api::the-wall-of-shame.the-wall-of-shame': ApiTheWallOfShameTheWallOfShame;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

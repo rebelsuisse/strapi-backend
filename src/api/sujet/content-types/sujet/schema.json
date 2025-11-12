@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sujets",
+  "info": {
+    "singularName": "sujet",
+    "pluralName": "sujets",
+    "displayName": "Sujet"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "canton": {
+      "type": "enumeration",
+      "enum": [
+        "CH",
+        "AG",
+        "AI",
+        "AR",
+        "BE",
+        "BL",
+        "BS",
+        "FR",
+        "GE",
+        "GL",
+        "GR",
+        "JU",
+        "LU",
+        "NE",
+        "NW",
+        "OW",
+        "SG",
+        "SH",
+        "SO",
+        "SZ",
+        "TG",
+        "TI",
+        "UR",
+        "VD",
+        "VS",
+        "ZG",
+        "ZH"
+      ]
+    },
+    "picture": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "the_wall_of_shames": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::the-wall-of-shame.the-wall-of-shame",
+      "mappedBy": "sujet"
+    }
+  }
+}
