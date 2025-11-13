@@ -441,6 +441,30 @@ export interface ApiSujetSujet extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    affiliation: Schema.Attribute.Enumeration<
+      [
+        'SVP',
+        'SP',
+        'FDP',
+        'Mitte',
+        'Gruene',
+        'GLP',
+        'AutoP',
+        'JungeTat',
+        'PdA',
+        'Sol',
+        'Pirat',
+        'PCR',
+        'MCG',
+        'EVP',
+        'EDU',
+        'Lega',
+        'None',
+        'Other',
+      ]
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'SVP'>;
     canton: Schema.Attribute.Enumeration<
       [
         'CH',
@@ -471,7 +495,8 @@ export interface ApiSujetSujet extends Struct.CollectionTypeSchema {
         'ZG',
         'ZH',
       ]
-    >;
+    > &
+      Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -599,7 +624,7 @@ export interface ApiTheWallOfShameTheWallOfShame
     sources: Schema.Attribute.Component<'link.link', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     subject_role: Schema.Attribute.String &

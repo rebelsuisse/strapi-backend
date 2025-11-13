@@ -25,7 +25,6 @@ export default [
   {
     name: 'strapi::cors',
     config: {
-      enabled: true,
       header: '*',
       // !!! IMPORTANT : Ajoutez ici toutes les URL de votre frontend
       origin: [
@@ -46,15 +45,4 @@ export default [
   'strapi::session',
   'strapi::favicon',
   'strapi::public',
-  {
-    name: 'strapi::rateLimit',
-    config: {
-      enabled: true,
-      interval: 1000 * 60, // 1 minute
-      max: 100, // max 100 requêtes par minute par IP
-      content: {
-        message: 'Too many requests, please try again later.',
-      },
-    },
-  },
 ];

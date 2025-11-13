@@ -17,6 +17,7 @@
     },
     "canton": {
       "type": "enumeration",
+      "required": true,
       "enum": [
         "CH",
         "AG",
@@ -59,6 +60,31 @@
       "relation": "oneToMany",
       "target": "api::the-wall-of-shame.the-wall-of-shame",
       "mappedBy": "sujet"
+    },
+    "affiliation": {
+      "type": "enumeration",
+      "required": true,
+      "default": "SVP",
+      "enum": [
+        "SVP",
+        "SP",
+        "FDP",
+        "Mitte",
+        "Gruene",
+        "GLP",
+        "AutoP",
+        "JungeTat",
+        "PdA",
+        "Sol",
+        "Pirat",
+        "PCR",
+        "MCG",
+        "EVP",
+        "EDU",
+        "Lega",
+        "None",
+        "Other"
+      ]
     }
   }
 }
