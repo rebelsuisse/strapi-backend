@@ -643,7 +643,7 @@ export interface ApiTheWallOfShameTheWallOfShame
         };
       }> &
       Schema.Attribute.SetMinMaxLength<{
-        maxLength: 64;
+        maxLength: 90;
       }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
