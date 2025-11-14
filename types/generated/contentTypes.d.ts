@@ -643,11 +643,19 @@ export interface ApiTheWallOfShameTheWallOfShame
         };
       }> &
       Schema.Attribute.SetMinMaxLength<{
-        maxLength: 90;
+        maxLength: 99;
+        minLength: 11;
       }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    visible: Schema.Attribute.Boolean &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<true>;
   };
 }
 

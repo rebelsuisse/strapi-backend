@@ -22,7 +22,8 @@
           "localized": true
         }
       },
-      "maxLength": 90,
+      "minLength": 11,
+      "maxLength": 99,
       "required": true,
       "unique": true
     },
@@ -143,6 +144,15 @@
       },
       "component": "link.link",
       "repeatable": true
+    },
+    "visible": {
+      "type": "boolean",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "default": true
     }
   }
 }
