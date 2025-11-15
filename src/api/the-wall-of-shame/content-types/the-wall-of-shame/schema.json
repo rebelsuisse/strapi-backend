@@ -34,7 +34,8 @@
           "localized": true
         }
       },
-      "targetField": "title"
+      "targetField": "title",
+      "required": true
     },
     "sujet": {
       "type": "relation",
@@ -77,7 +78,9 @@
         "transphobia",
         "islamophobia",
         "neonazism",
-        "xenophobia"
+        "xenophobia",
+        "conspiracism",
+        "other"
       ]
     },
     "description": {
@@ -103,9 +106,9 @@
         "Twitter_X",
         "Instagram",
         "Parliament",
-        "Media",
         "Television",
         "Newspaper",
+        "OtherMedia",
         "Campaign",
         "Statement",
         "Public",

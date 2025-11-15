@@ -545,6 +545,8 @@ export interface ApiTheWallOfShameTheWallOfShame
         'islamophobia',
         'neonazism',
         'xenophobia',
+        'conspiracism',
+        'other',
       ]
     > &
       Schema.Attribute.Required &
@@ -594,9 +596,9 @@ export interface ApiTheWallOfShameTheWallOfShame
         'Twitter_X',
         'Instagram',
         'Parliament',
-        'Media',
         'Television',
         'Newspaper',
+        'OtherMedia',
         'Campaign',
         'Statement',
         'Public',
@@ -616,6 +618,7 @@ export interface ApiTheWallOfShameTheWallOfShame
     >;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'title'> &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
