@@ -550,6 +550,7 @@ export interface ApiTheWallOfShameTheWallOfShame
         'validism',
         'traffic violation',
         'other offence',
+        'lie',
         'other',
       ]
     > &
