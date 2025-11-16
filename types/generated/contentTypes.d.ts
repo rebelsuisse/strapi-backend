@@ -547,6 +547,9 @@ export interface ApiTheWallOfShameTheWallOfShame
         'xenophobia',
         'conspiracism',
         'fascism',
+        'validism',
+        'traffic violation',
+        'other offence',
         'other',
       ]
     > &
