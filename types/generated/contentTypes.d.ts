@@ -546,6 +546,7 @@ export interface ApiTheWallOfShameTheWallOfShame
         'neonazism',
         'xenophobia',
         'conspiracism',
+        'fascism',
         'other',
       ]
     > &
