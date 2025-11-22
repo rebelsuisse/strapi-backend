@@ -459,6 +459,7 @@ export interface ApiSujetSujet extends Struct.CollectionTypeSchema {
         'EVP',
         'EDU',
         'Lega',
+        'MassVoll',
         'None',
         'Other',
       ]
@@ -546,10 +547,14 @@ export interface ApiTheWallOfShameTheWallOfShame
         'neonazism',
         'xenophobia',
         'conspiracism',
+        'climate denial',
         'fascism',
         'validism',
         'traffic violation',
         'other offence',
+        'slander',
+        'defamation',
+        'insult',
         'lie',
         'other',
       ]
