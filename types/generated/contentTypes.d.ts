@@ -556,6 +556,7 @@ export interface ApiTheWallOfShameTheWallOfShame
         'slander',
         'defamation',
         'insult',
+        'populism',
         'lie',
         'other',
       ]
