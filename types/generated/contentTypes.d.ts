@@ -550,6 +550,7 @@ export interface ApiTheWallOfShameTheWallOfShame
         'climate denial',
         'fascism',
         'validism',
+        'social stigmatization',
         'traffic violation',
         'other offence',
         'slander',
