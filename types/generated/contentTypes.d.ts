@@ -460,6 +460,9 @@ export interface ApiSujetSujet extends Struct.CollectionTypeSchema {
         'EDU',
         'Lega',
         'MassVoll',
+        'PNOS',
+        'R\u00E9sistance Helv\u00E9tique',
+        'RRP',
         'None',
         'Other',
       ]
