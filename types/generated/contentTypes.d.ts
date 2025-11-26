@@ -610,6 +610,7 @@ export interface ApiTheWallOfShameTheWallOfShame
         'Facebook',
         'Twitter_X',
         'Instagram',
+        'TikTok',
         'Parliament',
         'Television',
         'Newspaper',
