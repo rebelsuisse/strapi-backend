@@ -545,6 +545,7 @@ export interface ApiTheWallOfShameTheWallOfShame
         'homophobia',
         'violence',
         'fraud',
+        'corruption',
         'transphobia',
         'islamophobia',
         'neonazism',
