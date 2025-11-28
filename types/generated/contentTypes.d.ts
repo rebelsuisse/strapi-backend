@@ -612,6 +612,8 @@ export interface ApiTheWallOfShameTheWallOfShame
         'Twitter_X',
         'Instagram',
         'TikTok',
+        'WhatsApp',
+        'Telegram',
         'Parliament',
         'Television',
         'Newspaper',
