@@ -614,6 +614,8 @@ export interface ApiTheWallOfShameTheWallOfShame
         'TikTok',
         'WhatsApp',
         'Telegram',
+        'YouTube',
+        'OtherInternet',
         'Parliament',
         'Television',
         'Newspaper',
