@@ -552,6 +552,7 @@ export interface ApiTheWallOfShameTheWallOfShame
         'xenophobia',
         'conspiracism',
         'climate denial',
+        'science denialism',
         'fascism',
         'validism',
         'social stigmatization',
