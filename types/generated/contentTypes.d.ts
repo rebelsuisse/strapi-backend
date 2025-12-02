@@ -463,6 +463,8 @@ export interface ApiSujetSujet extends Struct.CollectionTypeSchema {
         'PNOS',
         'R\u00E9sistance Helv\u00E9tique',
         'RRP',
+        'Egerkinger Komitee',
+        'AUNS',
         'None',
         'Other',
       ]
