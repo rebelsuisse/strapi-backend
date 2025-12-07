@@ -71,6 +71,7 @@
       "enum": [
         "racism",
         "antisemitism",
+        "holocaust denial",
         "sexism",
         "homophobia",
         "violence",
@@ -83,6 +84,7 @@
         "conspiracism",
         "climate denial",
         "science denialism",
+        "authoritarianism",
         "fascism",
         "validism",
         "social stigmatization",

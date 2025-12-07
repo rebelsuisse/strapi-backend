@@ -543,6 +543,7 @@ export interface ApiTheWallOfShameTheWallOfShame
       [
         'racism',
         'antisemitism',
+        'holocaust denial',
         'sexism',
         'homophobia',
         'violence',
@@ -555,6 +556,7 @@ export interface ApiTheWallOfShameTheWallOfShame
         'conspiracism',
         'climate denial',
         'science denialism',
+        'authoritarianism',
         'fascism',
         'validism',
         'social stigmatization',
