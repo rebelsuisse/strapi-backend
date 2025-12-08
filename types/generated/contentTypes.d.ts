@@ -558,6 +558,7 @@ export interface ApiTheWallOfShameTheWallOfShame
         'science denialism',
         'authoritarianism',
         'fascism',
+        'colonialism',
         'validism',
         'social stigmatization',
         'traffic violation',
