@@ -568,6 +568,7 @@ export interface ApiTheWallOfShameTheWallOfShame
         'insult',
         'populism',
         'lie',
+        'multiple',
         'other',
       ]
     > &
