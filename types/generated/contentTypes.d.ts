@@ -465,6 +465,7 @@ export interface ApiSujetSujet extends Struct.CollectionTypeSchema {
         'RRP',
         'Egerkinger Komitee',
         'AUNS',
+        'WEF',
         'None',
         'Other',
       ]
