@@ -547,7 +547,7 @@ export interface ApiTheWallOfShameTheWallOfShame
         'holocaust denial',
         'sexism',
         'homophobia',
-        'fatphobia ',
+        'fatphobia',
         'violence',
         'fraud',
         'corruption',
