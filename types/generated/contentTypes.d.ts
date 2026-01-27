@@ -558,6 +558,7 @@ export interface ApiTheWallOfShameTheWallOfShame
         'conspiracism',
         'climate denial',
         'science denialism',
+        'historical revisionism',
         'authoritarianism',
         'fascism',
         'colonialism',
