@@ -444,6 +444,7 @@ export interface ApiSujetSujet extends Struct.CollectionTypeSchema {
     affiliation: Schema.Attribute.Enumeration<
       [
         'SVP',
+        'BDP',
         'SP',
         'FDP',
         'Mitte',

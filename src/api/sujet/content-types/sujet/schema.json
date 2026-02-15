@@ -67,6 +67,7 @@
       "default": "SVP",
       "enum": [
         "SVP",
+        "BDP",
         "SP",
         "FDP",
         "Mitte",
